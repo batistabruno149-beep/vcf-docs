@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Conectando ao Viral Clips Factory...</title>
+<style>
+body{font-family:sans-serif;background:#0f172a;color:#e2e8f0;display:grid;place-items:center;height:100vh;margin:0;text-align:center}
+a{color:#22c55e}
+</style>
+</head>
+<body>
+<div>
+<h1>⏳ Redirecionando para a fábrica...</h1>
+<p>Se nada acontecer em 3 segundos, <a id="link" href="#">clique aqui</a>.</p>
+</div>
+<script>
+(function () {
+  var destino = 'http://localhost:8200/api/tiktok/callback' + location.search;
+  var a = document.getElementById('link');
+  a.href = destino;
+  setTimeout(function () { window.location.replace(destino); }, 300);
+})();
+</script>
+</body>
+</html>
